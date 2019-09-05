@@ -23,9 +23,26 @@ function setTheColor(e) {
    brush.style.background = inputValue.value;  
 }
 
-for (let i=0; i<20; i++) {
+
+for (let i=0; i<1000; i++) {
     createDivs = document.createElement('div');
     createDivs.className = 'square';
     twentyDivs = body.appendChild(createDivs);
-    console.log(createDivs);
-  }
+
+} 
+
+createDivs.addEventListener('click', change);
+
+
+    function change(e) {
+        e.preventDefault();
+        inputValue = document.querySelector('#color-field');
+        brush.style.background = inputValue.value; 
+    }
+    
+  
+
+
+  //console.log(createDivs);
+
+  
