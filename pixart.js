@@ -9,3 +9,11 @@ function setTheColor(e) {
    brush.style.background = inputValue.value;  
 }
 
+button.addEventListener('keyup', setTheColor);
+
+function setTheColor(e) {
+    e.preventDefault();
+   inputValue = document.querySelector('#color-field');
+   brush.style.background = inputValue.value;  
+}
+
