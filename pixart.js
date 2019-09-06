@@ -25,7 +25,7 @@ function setTheColor(e) {
 
 
 
-for (let i=0; i<1000; i++) {
+for (let i=0; i<8000; i++) {
     let createDivs = document.createElement('div');
     createDivs.className = 'square';
     document.body.appendChild(createDivs);
