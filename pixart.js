@@ -1,8 +1,9 @@
 let button = document.querySelector('#set-color');
 let brush = document.querySelector('.brush');
-let createDivs; // document.createElement('div');
+let inputValue = document.querySelector('#color-field');
+//let createDivs; // document.createElement('div');
 //createDivs.className = 'square';
-let body = document.getElementsByTagName('BODY')[0];
+//let body = document.getElementsByTagName('BODY')[0];
 //let twentyDivs = body.appendChild(createDivs);
 
 
@@ -11,7 +12,6 @@ button.addEventListener('click', setTheColor);
 
 function setTheColor(e) {
     e.preventDefault();
-   inputValue = document.querySelector('#color-field');
    brush.style.background = inputValue.value;  
 }
 
@@ -24,25 +24,25 @@ function setTheColor(e) {
 }
 
 
+
 for (let i=0; i<1000; i++) {
-    createDivs = document.createElement('div');
+    let createDivs = document.createElement('div');
     createDivs.className = 'square';
-    twentyDivs = body.appendChild(createDivs);
+    document.body.appendChild(createDivs);
+    //twentyDivs = body.appendChild(createDivs);
+
+      console.log(createDivs);
+
+
+    createDivs.addEventListener('mouseover', change);
 
 } 
 
-createDivs.addEventListener('click', change);
-
-
-    function change(e) {
-        e.preventDefault();
-        inputValue = document.querySelector('#color-field');
-        brush.style.background = inputValue.value; 
-    }
-    
+function change() {
+    this.style.background = inputValue.value; 
+}
   
 
 
-  //console.log(createDivs);
 
   
